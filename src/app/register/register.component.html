@@ -1,0 +1,14 @@
+<img class="loginimg" src="../../assets/loginbg.png" alt="" srcset="">
+
+<span class="title">INSPIRA</span>
+
+<div class="container">
+  <span class="loginTitle">Register</span>
+  <input type="text" maxlength=15 class="input" name="username" [(ngModel)]="username" placeholder="Username">
+  <input type="password" class="input" [(ngModel)]="password" placeholder="Password">
+  <button class="loginbtn" (click)="register(this.username, this.password)"
+    [disabled]="username.length==0||password.length==0" button>Register</button>
+<span class="error" *ngIf="error">Please choose a unique username</span>
+
+  <span class="loginLink" (click)="navToLogin()">Login</span>
+</div>
